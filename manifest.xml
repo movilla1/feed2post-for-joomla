@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.7" method="upgrade">
+	<name>Feed2post</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>2011-04-02</creationDate>
+	<author>Mario O. Villarroel</author>
+	<authorEmail>movilla@elcansoftware.com</authorEmail>
+	<authorUrl>http://www.feed2post.com</authorUrl>
+	<copyright>(c) 2011 Elcansoftware, LGPL</copyright>
+	<license>Licensed LGPL, for commercial rewrite of this plugin, please contact me.</license>
+	<!--  The version string is recorded in the components table -->
+	<version>v 3.0rc10b</version>
+    <releaseType>Major Update</releaseType>
+	<!-- The description is optional and defaults to the name -->
+	<description>
+ <![CDATA[
+    <a href="http://www.feed2post.com"><img src="http://www.feed2post.com/images/feedpost_logo.jpg" border="0"></a>
+    <h2>Thank you for installing Feed2post.</h2>
+    This component is released under the GPL license.
+    <p>
+    Please proceed to <a href="index.php?option=com_feed2post&amp;task=options">
+	Configuration</a> to set up your component.
+    If the settings are right for you, please click save, otherwise, change the settings to fit your needs and then click save.
+    </p>
+    <div style="text-align: center"><img src="http://www.feed2post.com/images/elcan.jpg" border='0'></div>
+    <p>Special thanks to:</p>
+    <ul>
+     <li>Carolina G. Piva</li>
+     <li>Our beta testers</li>
+     <li>Christopher</li>     
+    </ul>
+  ]]>	
+	</description>
+    <install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+    <update> 
+    	<schemas> 
+    		<schemapath type="mysql">sql/updates</schemapath> 
+    	</schemas> 
+    </update>
+    <files folder="frontend">
+      <filename>feed2post.php</filename>
+      <filename>index.html</filename>
+      <filename>controller.php</filename>
+      <filename>twitter_button_5_hi.gif</filename>
+    </files>
+    <media destination="com_feed2post" folder="media"> 
+     <filename>index.html</filename>
+    </media>
+	<administration>
+		<languages>
+	        <language tag="en-GB">en-GB.com_feed2post.ini</language>
+	        <language tag="es-ES">es-ES.com_feed2post.ini</language>
+	    </languages>
+		<!-- Administration Menu Section -->
+		<menu link="option=com_feed2post">Feed2Post</menu>
+        <submenu>
+            <menu link="option=com_feed2post">Pannel</menu>
+            <menu link="option=com_feed2post&amp;task=itemList">List All Sources</menu>
+            <menu link="option=com_feed2post&amp;task=postAll">Post All</menu>
+            <menu link="option=com_feed2post&amp;task=showOptions">Configure</menu>
+        </submenu> 
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files>
+            <folder>sql</folder>
+ 			<filename>feed2post.php</filename>
+   			<filename>controller.php</filename>
+   			<filename>tables/feed2post.php</filename>
+   			<filename>tables/feed2postconfig.php</filename>
+   			<filename>toolbar.feed2post.php</filename>
+   			<filename>toolbar.feed2post.html.php</filename>
+            <filename>defines.php</filename>
+            <filename>helper.php</filename>
+            <filename>engines/content16.engine.php</filename>
+            <filename>engines/formcateg.xml</filename>
+            <filename>engines/F2pEngine.php</filename>
+            <filename>engines/zoo24.engine.php</filename>
+            <filename>engines/zoo25.engine.php</filename>
+            <filename>engines/k2content.engine.php</filename>
+            <filename>models/items.php</filename>
+            <filename>parsers/F2pParsers.php</filename>
+            <filename>parsers/rss.parser.php</filename>
+            <filename>parsers/rss_cache.inc</filename>
+            <filename>parsers/rss_fetch.inc</filename>
+            <filename>parsers/rss_parse.inc</filename>
+            <filename>parsers/rss_utils.inc</filename>
+            <filename>parsers/atomxml.parser.php</filename>
+            <filename>parsers/twitter.parser.php</filename>
+            <filename>parsers/twitter/twitteroauth.php</filename>
+            <filename>parsers/twitter/OAuth.php</filename>
+            <filename>parsers/extlib/Snoopy.class.inc</filename>
+            <filename>views/defaults/view.html.php</filename>
+            <filename>views/defaults/tmpl/default.php</filename>
+            <filename>views/imports/view.html.php</filename>
+            <filename>views/imports/tmpl/default.php</filename>
+            <filename>views/items/view.html.php</filename>
+            <filename>views/items/tmpl/default.php</filename>
+            <filename>views/options/view.html.php</filename>
+            <filename>views/options/tmpl/default.php</filename>
+            <filename>views/pannel/view.html.php</filename>
+            <filename>views/pannel/tmpl/default.php</filename>
+            <filename>views/single/view.html.php</filename>
+            <filename>views/single/tmpl/default.php</filename>
+            <filename>views/sources/view.html.php</filename>
+            <filename>views/sources/tmpl/default.php</filename>
+            <filename>index.html</filename>
+    	    <folder>library</folder>
+            <folder>css</folder>
+            <folder>images</folder>
+   	 </files>
+    </administration>
+</extension>

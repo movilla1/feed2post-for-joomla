@@ -1,0 +1,43 @@
+01/11/2011 -- V3.0Rc6    Start of log
+
+Added support for multi language feeds, you need to select the feed language in order for it to be stored on joomla 1.7 only.
+Added the application name on the category list to identify the category better, thanks to Christopher for the code change.
+
+23/11/2011 -- V3.0Rc7
+
+Fixed support for language file
+Fixed layout for joomla 1.7
+Fixed to allow cronjob to run properly.
+Fix to RSSutils date-time script
+Added support for zoo tags.
+Parsing for images as enclosure allowed.
+
+05/03/2012 -- V3.0Rc7b 
+Compatible with joomla 2.5
+
+06/04/2012 -- V3.0rc7b
+Fixes for the linkback, added image parsing inside the articles (you can remove the images)
+
+09/05/2012 -- V3.0rc8
+Fixes for content bug
+Added zoo 2.5 engine and marked the previous one for zoo 2.4 (both zoo24 and zoo25 engines are available now, pick the right one)
+
+10/05/2012 -- V3.0rc8
+Added the option to stop processing the article when the "cut at lenght" or the "cut at tag" has been reached (truncating an article)
+Added zoo's output support for cronjob, now it fully works when called from cronjob. 
+
+28/06/2012 -- V3.0rc9
+Fixed magpie's fetch, changed to use php_curl as the exec function is not always available. Now works with secure servers with exec disabled trying to fetch ssl feeds.
+
+08/08/2012 -- V3.0Rc 10
+New:
+ * K2 support as storage engine (BETA);
+ * Image downloading (so it stops hotlinking and get's a local cache) 
+ * Keyword extraction from the article.
+     Keyword extraction will use a "max keyword count" parameter to stop adding keywords after the number has been reached and "Min keyword len" to avoid the short keywords 
+     (Which are also bad for seo, like "if", "at", "on", etc.).
+ * Bugfix:
+    For twitter parser that was not possible to set the pin after the first "save".
+
+25/09/2012 -- V3.0Rc 10b
+* Bugfix: Meta description for joomla content was not urldecoded. 

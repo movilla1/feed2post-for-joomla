@@ -1,0 +1,31 @@
+<?php
+/**
+ * Feed2post v3.0
+ * @author Mario O. Villarroel
+ * @copyright 2010 - Elcan Software
+ * @license GPLv2
+ */
+defined('_JEXEC') or die('Restricted access');
+?>
+ <form action="index.php" method="get" name="adminForm" id="adminForm">
+  <input type="hidden" name="option" value="<?php echo $this->option;?>" />
+  <input type="hidden" name="task" value="" />
+ </form>
+ <table class="pannel" style="width: 95%;text-align: left; margin-left: 20px;">
+ <tr>   
+    <td style="width: 25%;"><a href="index.php?option=<?php echo $this->option?>&task=itemList"><div class="icon-48-browser" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("VIEW_ALL")?></a></td>
+    <td style="width: 25%;"><a href="index.php?option=<?php echo $this->option?>&task=showOptions"><div class="icon-48-config" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("CONFIGURE_F2P")?></a></td>
+    <td rowspan="4" style="width: 50%;"><iframe src="http://www.feed2post.com/f2pnews.php" style="border: 1px solid gray; width: 98%; height: 330px" scrolling="auto" ></iframe></td>
+ </tr>
+ <tr>
+    <td style="width: 25%;"><a href="index.php?option=<?php echo $this->option?>&task=showDefaults"><div class="icon-48-cpanel" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("DEFAULTS_F2P")?></a></td>
+    <td style="width: 25%;"><a href="http://www.feed2post.com/support/forum" target="_blank"><div class="icon-48-help_header" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("get_help")?></a></td>
+ </tr>
+ <tr>
+    <td style="width: 25%"><a href="index.php?option=com_content"><div class="icon-48-article" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("article_manager")?></a></td>
+    <?php if (!is_16()) {?><td style="width: 25%"><a href="index.php?option=com_sections&scope=content"><div class="icon-48-sections" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("sections_manager")?></a></td>
+ </tr>
+ <tr><?php } ?>
+    <td><a href="index.php?option=com_categories&section=com_content"><div class="icon-48-categories" style="width: 48px; height: 48px;">&nbsp;</div><br /><?php echo JText::_("category_manager")?></a></td>
+ </tr>
+ </table>

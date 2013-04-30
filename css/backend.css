@@ -1,0 +1,76 @@
+#F2P-pannel {
+	width: 95%; 
+	text-align: center; 
+	margin-left: 20px;
+}
+#F2P-pannel td {
+	width: 25%;
+}
+th.F2P-form-label {
+	text-align: right !important;
+	width: 140px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px !important;
+	font-weight: bold !important;
+    line-height: 135%;
+	border-bottom: 0 !important;
+}
+.F2P-form-section-title-x {
+	text-align: center;
+}
+.F2P-form-section-title {
+    border-bottom: 3px solid #E3E3E3 !important;
+    color: #333333;
+    vertical-align: text-bottom;
+    font-size: 18px !important;
+    height: 26px;
+    width: 100%;
+    colspan: 4;
+}
+.F2P-icon-48-browser {
+    background-image: url("../images/icon-48-stats.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 48px;
+}
+.F2P-icon-48-config {
+    background-image: url("../images/icon-48-config.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 48px;
+}	
+.F2P-icon-48-cpanel {
+    background-image: url("../images/icon-48-cpanel.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 48px;
+}
+.F2P-icon-48-help_header {
+    background-image: url("../images/icon-48-help_header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 48px;
+}
+.F2P-icon-48-article {
+    background-image: url("../images/icon-48-article.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 48px;
+}
+.F2P-icon-48-categories {
+    background-image: url("../images/icon-48-category.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 48px;
+}
+.F2P-help-frame {
+    border: 1px solid gray;
+    height: 330px;
+    width: 98%;
+}
